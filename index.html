@@ -2,22 +2,316 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Spring Boot Tutorial</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+
+			.first_slide{
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				width: 100%;
+			}
+			.first_aside{
+				height: 50vh;
+				display: flex;
+				justify-content: flex-end;
+			}
+			.title_h1{
+				font-size: 70px;
+				text-align: left;
+				margin-bottom: 30px;
+			}
+			.title_h3{
+				font-size: 40px;
+				text-align: left;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			.title_h4{
+				font-size: 30px;
+				text-align: left;
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+			.list_section{
+				font-size: 25px;
+				text-align: left;
+				font-weight: 700;
+				font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			}
+
+			.third_aside{
+				background-color: rgba(20, 210, 20, 1);
+				height: 5vh;
+				position: relative;
+				left: -35%;
+				width: 200%;
+			}
+			.second_aside{
+				position: relative;
+				left: -10%;
+				height: 43vh;
+			}
+
+			.other_slide{
+				position: relative;
+				left: -10%;
+				height: 100vh;
+				/* background-color: red; */
+			}
+
+			.other_slide section{
+				height: 70%;
+				padding: 40px;
+				text-align: left;
+			}
+
+			.other_slide section ul{
+				text-align: justify;
+			}
+
+			.specify{
+				margin-left: 70px;
+			}
+
+			.other_slide section li{
+				font-size: 26px;
+				margin-bottom: 35px;
+			}
+
+			.fragment.blur {
+				filter: blur(5px);
+			}
+			.fragment.blur.visible {
+				filter: none;
+			}
+
+			.second_section{
+				background-color: rgba(20, 210, 20, 1);
+				height: 4vh;
+				position: fixed;
+				left: -35%;
+				width: 200%;
+				bottom: -12px;
+			}
+			.paragraph{
+				font-size: 40px;
+				margin-bottom: 50px;
+			}
+
+			.text{
+				font-size: 1.6em;
+				margin: 70px;
+			}
+
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class="first_slide">
+					<aside class="first_aside">
+						<img src="./images/boot-removebg-preview.jpg" alt="">
+					</aside>
+					<aside class="second_aside">
+						<h1 class="title_h1">Spring Boot</h1>
+						<hr>
+						<section class="list_section">
+							Prince AVOHOU, Florian KOTANMI, Fadel SEWADE
+						</section>
+					</aside>
+					<aside class="third_aside"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">What is Spring Boot ?</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">Java framework that allows you to create standalone, professional-quality applications</li>
+							<li class="fragment custom blur">Designed to simplify the development process by providing automatic configuration and dependency starters.</li>
+							<li class="fragment custom blur">It allows developers to focus more on writing application code by streamlining the configuration and setup process</li>
+							<li class="fragment custom blur">Spring Boot is a module of the Spring framework that enhances rapid application development (RAD) capabilities.</li> 
+							<li class="fragment custom blur">It is used to create standalone Spring-based applications that can be run with minimal Spring configuration.</li> 
+							<li class="fragment custom blur">Spring Boot provides a comprehensive infrastructure for developing microservices and enables the creation of enterprise-ready applications that can be easily executed.</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Getting Help</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">Learn the Spring basics. Spring Boot builds on many other Spring projects. Check the spring.io
+								web-site for a wealth of reference documentation. If you are starting out with Spring, try one of
+								the <a href="https://spring.io/guides">guides</a></li>
+							<li class="fragment custom blur"> Ask a question. We monitor <a href="https://stackoverflow.com">stackoverflow.com</a> for questions tagged with spring-boot.</li>
+							<li class="fragment custom blur"> Report bugs with Spring Boot at <a href="https://github.com/spring-projects/spring-boot/issues">github.com/spring-projects/spring-boot/issues.</a></li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Get Started</h2>
+					<hr>
+					<section>
+						<p class="paragraph">We talk about four (04) topics in this section. </p>
+						<ul class="specify">
+							<li class="fragment custom blur"> System Requirements</li>
+							<li class="fragment custom blur"> Installing Spring Boot</li>
+							<li class="fragment custom blur"> Developing Our First Application With Spring Boot</li>
+							<li class="fragment custom blur"> Developing Advanced Application With Spring Boot</li>
+						</ul>
+					</section>
+					<section class="other_slide">
+						<section>
+							<h2 class="title_h4">System Requirements</h2>
+							<section>
+								<ul class="specify">
+									<li class="fragment fade-up">Spring Boot requires Java 17 and compatible up to and including Java 21</li>
+									<li class="fragment fade-up"> It needs also build tools
+										<ul>
+											<li style="margin-left: 40px;">Maven (3.6.3 or later)</li>
+											<li style="margin-left: 40px; margin-top: -30px;">Gradle version 7.x (7.5 or later)</li>
+										</ul>
+									</li>
+									<li class="fragment fade-up"> Servlets Containers 
+										<ul>
+											<li style="margin-left: 40px;"> Tomcat 10.1 (6.0)</li>
+											<li style="margin-left: 40px; margin-top: -30px;"> Jetty (5.0)</li>
+										</ul>
+									</li>
+									<li class="fragment fade-up"> GraalVM Native Images
+										<ul>
+											<li style="margin-left: 40px;">GraalVM Community (22.7)</li>
+											<li style="margin-left: 40px; margin-top: -30px;">Native Build Tools (0.9.27)</li>
+										</ul>
+									</li>
+								</ul>
+							</section>
+						</section>
+					</section>
+					<section class="other_slide">
+						<h2 class="title_h4">Installing Spring Boot</h2>
+						<div>
+							<p class="text"> Check your current Java installation by using the following command:</p>
+							<p class="text " style="margin-left: 100px;">
+								$java -version</p>
+						</div>
+						<div>
+							<ul>
+								<li><strong>Maven</strong> and <strong>Gradle</strong>
+									are open source project management tool for Java projects.</li>
+								<li>They help manage dependencies, compile source
+									code, create packages, and deploy applications. </li>
+								<li>Maven uses a configuration file called
+									"pom.xml" to define the dependencies and plugins needed for the
+									project. It is often used in conjunction with Spring Boot to make it
+									easier to create and manage Spring projects.</li>
+							</ul>
+							<a href="https://maven.apache.org">maven.apache.org.</a>, <a
+							href="https://gradle.org">gradle.org</a>
+						</div>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Developing Our First Application</h2>
+					<hr>
+					<section>
+						<div>
+							<h3 class="title_h3">Prerequisites</h3>
+							<img src="./images/mvnJava.png" alt="">
+							<img src="" alt="">
+						</div>
+						<div>
+							<ul>
+								<li><Maven and Gradle
+									are open source project management tool for Java projects.</li>
+								<li>They help manage dependencies, compile source
+									code, create packages, and deploy applications. </li>
+								<li>Maven uses a configuration file called
+									"pom.xml" to define the dependencies and plugins needed for the
+									project. It is often used in conjunction with Spring Boot to make it
+									easier to create and manage Spring projects.</li>
+							</ul>
+							<a href="https://maven.apache.org">maven.apache.org.</a>, <a
+							href="https://gradle.org">gradle.org</a>
+						</div>
+						<aside class=" second_section"></aside>
+					</section>
+					<section class="other_slide">
+						<section>
+							<h3 class="title_h3">Deux méthodes sont généralement utilisés: </h3>
+							<ul style="margin-left: 100px;">
+								<li>Use des guides en ligne qui fournissent des instructions détaillées pour créer un projet Spring Boot en utilisant Maven.</li>
+								<p><a href="#">azeryt</a></p> <br><br><br>
+								<li>Use Spring Initializr </li>
+							</ul> <br><br>
+							<p style="font-size: 27px;">Pour la suite de la formation, nous utiliserons Spring Initializr pour créer nos projets pour des raisons de simplicité</p>
+						</section>
+						<aside class=" second_section"></aside>
+					</section>
+					<section class="other_slide">
+						<section>
+							<h3 class="title_h3" style="margin-bottom: 20px;">Use Spring Initializr </h3>
+								<ul >
+									<li style="font-size: 20px;">Ouvrez votre navigateur Web sur <a href="https://start.spring.io">https://start.spring.io</a></li>
+								</ul>
+							
+							
+							<img src="./tutoSpring.png" width="100%" alt="">
+						</section>
+						<aside class=" second_section"></aside>
+					</section>
+					<section class="other_slide">
+						<!-- <section> -->
+							<div>
+								<span style="font-size: 27px;">Cela télécharge un fichier zip que vous devez extraire. Ensuite </span>
+								<ul style="margin-left: 100px; margin-top: 30px;">
+									<li>
+										Tap the command below : <i> <strong>mvn clean install </strong> </i>
+									</li>
+									<li>
+										Execute your application: <i> <strong>mvn spring-boot:run</strong> </i>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<h3 class="title_h3"><u>Our first Code </u></h3>
+								<aside data-markdown style="font-size: 25px;">
+									```java [1|2|3|4|5|6|7-15|8|9-11|12-14]
+									import org.springframework.boot.SpringApplication;
+									import org.springframework.boot.autoconfigure.SpringBootApplication;
+									import org.springframework.web.bind.annotation.RequestMapping;
+									import org.springframework.web.bind.annotation.RestController;
+									@RestController
+									@SpringBootApplication
+									public class MyApplication {
+										@RequestMapping("/")
+										String home() {
+											return "Hello World!";
+										}
+										public static void main(String[] args) {
+											SpringApplication.run(MyApplication.class, args);
+										}
+									}
+								</aside> 
+							</div>
+						<!-- </section> -->
+						<aside class=" second_section"></aside>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -31,6 +325,8 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+				slideNumber: true,
+				slideNumber: 'c/t',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
