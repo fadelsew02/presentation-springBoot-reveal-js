@@ -50,24 +50,8 @@
 				font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 			}
 
-			.third_aside{
-				background-color: rgba(20, 210, 20, 1);
-				height: 5vh;
-				position: relative;
-				left: -35%;
-				width: 200%;
-			}
 			.second_aside{
-				position: relative;
-				left: -10%;
 				height: 43vh;
-			}
-
-			.other_slide{
-				position: relative;
-				left: -10%;
-				height: 100vh;
-				/* background-color: red; */
 			}
 
 			.other_slide section{
@@ -96,13 +80,13 @@
 				filter: none;
 			}
 
-			.second_section{
+			.second_section, .third_aside{
 				background-color: rgba(20, 210, 20, 1);
 				height: 4vh;
 				position: fixed;
 				left: -35%;
-				width: 200%;
-				bottom: -12px;
+				width: 170%;
+				bottom: -10px;
 			}
 			.paragraph{
 				font-size: 40px;
@@ -143,6 +127,63 @@
 							<li class="fragment custom blur">Spring Boot is a module of the Spring framework that enhances rapid application development (RAD) capabilities.</li> 
 							<li class="fragment custom blur">It is used to create standalone Spring-based applications that can be run with minimal Spring configuration.</li> 
 							<li class="fragment custom blur">Spring Boot provides a comprehensive infrastructure for developing microservices and enables the creation of enterprise-ready applications that can be easily executed.</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Spring Boot Ecosystem</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">Spring Framework:
+								<p>
+									- Inversion of Control (IoC): Spring Boot inherits the Inversion of Control capability from Spring, enabling the delegation of component management to Spring. <br>
+									- Dependency Injection: Spring facilitates dependency injection, enhancing code modularity and testability.
+								</p>
+							</li>
+							<li class="fragment custom blur">Spring Data
+								<p>
+									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br>
+									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br>
+									- MongoDB Support: Seamlessly integrates with MongoDB for NoSQL database-based applications. 
+								</p>
+							</li>
+							<li class="fragment custom blur">Spring Security:
+								<p>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
+								</p>
+							</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Spring Boot Ecosystem</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">Spring Cloud
+								<p>
+									- Cloud-Native Applications: Extends Spring Boot capabilities for developing cloud-native applications. <br>
+									- Distributed Configuration: Offers solutions for distributed configuration of applications in cloud environments. <br>
+									- Service Discovery: Facilitates dynamic service discovery and management of calls between microservices.
+								</p>
+							</li>
+							<li class="fragment custom blur">Spring Batch
+								<p>
+									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br>
+									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br>
+									- MongoDB Support: Seamlessly integrates with MongoDB for NoSQL database-based applications. 
+								</p>
+							</li>
+							<li class="fragment custom blur">Spring Security 
+								<p>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
+								</p>
+							</li>
 						</ul>
 					</section>
 					<aside class=" second_section"></aside>
@@ -236,7 +277,7 @@
 						</div>
 						<div>
 							<ul>
-								<li><Maven and Gradle
+								<li>Maven and Gradle
 									are open source project management tool for Java projects.</li>
 								<li>They help manage dependencies, compile source
 									code, create packages, and deploy applications. </li>
@@ -252,10 +293,10 @@
 					</section>
 					<section class="other_slide">
 						<section>
-							<h3 class="title_h3">Deux méthodes sont généralement utilisés: </h3>
+							<h3 class="title_h3">Two methods are used : </h3>
 							<ul style="margin-left: 100px;">
-								<li>Use des guides en ligne qui fournissent des instructions détaillées pour créer un projet Spring Boot en utilisant Maven.</li>
-								<p><a href="#">azeryt</a></p> <br><br><br>
+								<li>Use online guides which provide instructions to create a project Spring Boot using Maven.</li>
+								<br><br><br>
 								<li>Use Spring Initializr </li>
 							</ul> <br><br>
 							<p style="font-size: 27px;">Pour la suite de la formation, nous utiliserons Spring Initializr pour créer nos projets pour des raisons de simplicité</p>
@@ -266,18 +307,18 @@
 						<section>
 							<h3 class="title_h3" style="margin-bottom: 20px;">Use Spring Initializr </h3>
 								<ul >
-									<li style="font-size: 20px;">Ouvrez votre navigateur Web sur <a href="https://start.spring.io">https://start.spring.io</a></li>
+									<li style="font-size: 20px;">Open your web navigator on <a href="https://start.spring.io">https://start.spring.io</a></li>
 								</ul>
-							
+						
 							
 							<img src="./tutoSpring.png" width="100%" alt="">
 						</section>
 						<aside class=" second_section"></aside>
 					</section>
 					<section class="other_slide">
-						<!-- <section> -->
+						<!--<section> -->
 							<div>
-								<span style="font-size: 27px;">Cela télécharge un fichier zip que vous devez extraire. Ensuite </span>
+								<span style="font-size: 27px;">That download a zip file which you extract. </span>
 								<ul style="margin-left: 100px; margin-top: 30px;">
 									<li>
 										Tap the command below : <i> <strong>mvn clean install </strong> </i>
@@ -308,9 +349,195 @@
 									}
 								</aside> 
 							</div>
-						<!-- </section> -->
+						</section> 
 						<aside class=" second_section"></aside>
 					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Spring Boot Project Folder Structure</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">src/main/java Directory
+								<p>
+									- Contains the main source code of the application.
+									 - The package structure typically follows the reverse domain name convention, for example, com.example.myapp.
+									- The entry point of the application is often in a package like com.example.myapp with a main class annotated with <strong>@SpringBootApplication</strong>.
+								</p>
+							</li>
+							<li class="fragment custom blur">src/main/resources Directory
+								<p>
+									- Contains non-Java resources of the application.
+									- Configuration files, property files, XML files, templates, etc.
+									- The application.properties or application.yml file is commonly used to configure the applications
+								</p>
+							</li>
+							<li class="fragment custom blur">src/test Directory
+								<p>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
+								</p>
+							</li>
+							<li class="fragment custom blur">templates Directory
+								<p>
+									- Contains templates files for templates engines . <br>
+									- Used to generate dynamic views in web applications. 
+								</p>
+							</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Spring Boot Project Folder Structure</h2>
+					<hr>
+					<section>
+						<ul>
+							<li class="fragment custom blur">pom.xml File (Maven) or build.gradle File(Gradle)
+								<p>
+									- Contains project configuration, including dependencies, plugins, and other build settings.
+									- Also manages the project's lifecycle, compilation, testing, packaging, etc.
+								</p>
+							</li>
+							<li class="fragment custom blur">target Directory (Maven) or Build Directory (Gradle)
+								<p>
+									- Contains files generated during compilation, packaging and building of the project.
+									- The executable JAR file of the application (if configured as such) is usually created in this directory.
+								</p>
+							</li>
+							<li class="fragment custom blur">application.properties (or application.yml) File
+								<p>
+									- Contains configuration properties for the application <br>
+									- Defines parameters such as database URL, ports, active profiles. <br>
+									- Can be used to customize the behavior of the application without modifying the source code 
+								</p>
+							</li>
+							<li class="fragment custom blur">static (or public) Directory
+								<p>
+									- Contains statics resources such as CSS files, Javascript files, images <br>
+									- These files are served directly by the embedded web server
+								</p>
+							</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3">Fundamentals concepts of Spring Boot</h2>
+					<hr>
+					<section>
+						<h3 class="title_h3">Inversion of Control (IoC) and Dependency Injection </h3>
+						<ol>
+							<li class="fragment custom blur"> Inversion of Control (IoC) 
+								<ul style="margin-left: 50px;">
+									<li>It's a principle where the management of object lifecycles is inverted. </li>
+									<li>Instead of the application directly creating its objects, it lets them be created and managed by an Inversion of Control container, such as Spring. </li>
+									<li>This improves modularity and makes dependency management easier.</li>
+									<li>This is a related concept to IoC. Rather than manually creating dependencies for a component, Spring automatically injects dependencies when the object is created. </li>
+									<li>This makes the code more flexible, testable, and easier to maintain.</li>
+								</ul>
+							</li>
+							<li class="fragment custom blur"> Dependency Injection 
+								<ul style="margin-left: 50px;">
+									<li>This is a related concept to IoC. Rather than manually creating dependencies for a component, Spring automatically injects dependencies when the object is created. </li>
+									<li>This makes the code more flexible, testable, and easier to maintain.</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Fundamentals concepts of Spring Boot</h2>
+					<hr>
+					<section>
+						<ol>
+							<li  class="fragment custom blur"> <span style="font-weight: bold;"> Spring Boot Annotations</span> <br><br><br>
+								<ul style="margin-left: 50px;">
+									<li>Spring Boot extensively uses annotations to simplify configuration and development.</li>
+									<li> <strong>@SpringBootApplication</strong> This annotation is used to mark the main class of the application and instruct Spring Boot to start scanning from this class to configure the application.</li>
+									<li> <strong>@Autowired:</strong> Used to automatically inject dependencies into components.</li>
+									<li> <strong>@Service, @Repository, @Controller:</strong> These annotations are used to declare components such as services, repositories, and controllers, respectively.</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Creating RESTful Services with Spring Boot</h2>
+					<hr>
+					<section>
+						<ol>
+							<li  class="fragment custom blur"> <span style="font-weight: bold;"> Introduction to RESTful Web Service Creation</span> <br><br><br>
+								<ul style="margin-left: 50px;">
+									<li> <span style="font-weight: 700;">RESTful Web Services.</span> 
+										<p>
+											These services utilize the HTTP protocol to facilitate communication between systems. RESTful services are built on principles such as resource-oriented architecture and the use of HTTP methods (GET, POST, PUT, DELETE).
+										</p>
+									</li>
+									<li>
+										<span  style="font-weight: 700;">Advantages</span>
+										<p>
+											Lightweight, scalable, and widely employed for constructing web APIs.
+										</p>
+
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Creating RESTful Services with Spring Boot</h2>
+					<hr>
+					<section>
+						<ol>
+							<li  class="fragment custom blur"> <span style="font-weight: bold;">  Usage of @RestController and @RequestMapping Annotations</span> <br><br><br>
+								<ul style="margin-left: 50px;">
+									<li> <span style="font-weight: 700;">@RestController</span> 
+										<p>
+											This annotation is a specialized version of @Controller, indicating that each method directly returns an object in the body of the HTTP response instead of using a view.
+										</p>
+									</li>
+									<li>
+										<span  style="font-weight: 700;">@RequestMapping</span>
+										<p>
+											Used to map HTTP requests to controller methods. It allows defining the API endpoint, supported HTTP methods, and more.
+										</p>
+
+									</li>
+								</ul>
+							</li>
+							<li  class="fragment custom blur"> <span style="font-weight: bold;"> Handling Query Parameters and Responses</span> <br><br><br>
+								<ul style="margin-left: 50px;">
+									<li> <span style="font-weight: 700;">Query Parameters</span> 
+										<p>
+											In RESTful services, parameters can be extracted from the URL (path variables) or the request itself. Spring Boot simplifies this with annotations such as @PathVariable and @RequestParam.
+										</p>
+									</li>
+									<li>
+										<span  style="font-weight: 700;">Responses: </span>
+										<p>
+											Methods can return objects that are automatically converted into JSON (by default) or any other specified format.
+										</p>
+
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Practical work</h2>
+					<hr>
+					<section>
+						<p>In this section, we will practice creating restful web services. The objective of the Tp will be to Create a simple RESTful service with Spring Boot to manage a list of books.</p> <br>
+						<p><a href="https://github.com/fadelsew02/bookTp-spring-boot">Download code</a></p>
+					</section>
+					<aside class=" second_section"></aside>
 				</section>
 			</div>
 		</div>
