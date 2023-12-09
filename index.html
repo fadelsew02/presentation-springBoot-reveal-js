@@ -539,6 +539,141 @@
 					</section>
 					<aside class=" second_section"></aside>
 				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">What is Thymeleaf?</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;">There are several template engines in Java: JSP (directly included in the Servlet engine of Java Web servers), FreeMarker, Velocity… It is therefore not easy to know which solution to choose.</p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;">Thymeleaf, however, has several advantages over other template engines:</p>
+						<ul>
+							<li>Thymeleaf is a modern server-side Java template engine for both web and standalone environments capable of processing HTML,XML,JS,CSS</li>
+							<li>it allows you to create templates that respect the document format. If you write a template for an HTML page, the template will be a valid HTML page.</li>
+							<li>it allows you to provide default values ​​in a template. We can thus design templates for a website with example data and the site remains navigable offline like a simple static site. This is particularly useful if you work in collaboration with web designers or if you want to create a mock-up of your site.</li>
+						</ul>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf integration in Spring boot app</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">For an application using Spring Boot, the configuration is very simple. You just need to add a dependency in your project to the module spring-boot-starter-thymeleaf. If you use Maven, you need to add to your file pom.xml:</p>
+						<p style="text-align: center;"><img src="./dependency-for-thymeleaf.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">By default, Thymeleaf templates should be placed in your project directory . Static files (not transformed by Thymeleaf ) must be placed in your project directory .src/main/resources/templatessrc/main/resources/static</p>
+						<p style="text-align: center;"><img src="./note-thymeleaf.png" alt=""></p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">A Thymeleaf template for an HTML5 page is an HTML page using Thymeleaf attributes which will be interpreted by the server to produce the final page.</p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In order to respect the HTML5 format, thymeleaf attributes are declared as attributes data-th-*. These attributes will not be present in the final page but ensure that the template is itself a valid HTML5 page .</p>
+						<p style="text-align: center;"><img src="./exemple-thymeleaf.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In the example above, we use the attribute data-th-textto indicate the text content of the tag &lt;div&gt;. The text David will be replaced at runtime by the result of the expression ${ user.login }</p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes</h2>
+					<hr>
+					<section>
+						<p style="text-align: center;margin-bottom: 20px;"><img src="./note-2-thymeleaf.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">The content of Thymeleaf attributes can be simple text or an expression that will be interpreted at runtime.Expressions are delimited by:</p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes</h2>
+					<hr>
+					<section>
+						<ul>
+							<li>
+								${…}
+								<br>
+								<span style="display:inline-block;margin-left:  30px;margin-top: 20px;">For expressions to evaluate</span>
+							</li>
+							<li>
+								*{…}
+								<br>
+								<span style="display:inline-block;margin-left:  30px;margin-top: 20px;">For selection expressions to evaluate</span>
+							</li>
+							<li>
+								#{…}
+								<br>
+								<span style="display:inline-block;margin-left:  30px;margin-top: 20px;">For message expressions</span>
+							</li>
+							<li>
+								@{…}
+								<br>
+								<span style="display:inline-block;margin-left:  30px;margin-top: 20px;">For URL expressions</span>
+							</li>
+							<li>
+								~{…}
+								<br>
+								<span style="display:inline-block;margin-left:  30px;margin-top: 20px;">For fragment expressions</span>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes: ${…}</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">An expression delimited by ${...} represents an expression to evaluate. In a Spring application, this expression is written with SpEL and can reference any object present in the model.</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 101617.png" alt=""></p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 102929.png" alt=""></p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes: *{…}</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">An expression delimited by *{...}represents an expression to evaluate to select an attribute of an object. We use the Thymeleaf object attribute to define the reference object. This type of expression is very useful when you want to build forms or display the properties of a model object. Let's imagine that we want to display the information of a model object called utilisateur, this object contains the properties prenom, nomand age. We can indicate that this object is the reference object and select each property with *{...}:</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 103359.png" alt=""></p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf attributes: @{…}</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">A delimited expression @{...}represents a URL that must be resolved relative to the page generation context. All links internal to your application referencing your pages, your style sheets, your script files, etc. must use Thymeleaf attributes to position the path. The corresponding HTML attribute can be retained to allow the page to be opened locally.</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 104240.png" alt=""></p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf: Injection prevention</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Thymeleaf is configured by file type to prevent data injection. For HTML page generation, Thymeleaf will HTML escape reserved characters like &lt;or &gt;.</p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">So the template :</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 113951.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">will produce the final HTML page:</p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf: Injection prevention</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Thus, the dynamic data in the page does not modify the structure of the template and HTML injection is not possible.</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114115.png" alt=""></p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf : Conditions and loops</h2>
+					<hr>
+					<section>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In a template , it is very often necessary to produce part of a document under certain conditions or to repeat certain portions (for example to generate a table). The SpEL language does not allow such complex structures to be expressed. On the other hand, there are the Thymeleaf if and each attributes which are designed for this.
+							The if attribute allows you to control the production of the tag and everything it contains following the expression of a condition:</p>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114428.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">The each attribute allows you to iterate through an array or list or any iterable structure and repeat the tag and all its contents. We can thus produce an HTML table:</p>
+					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Thymeleaf : Conditions and loops</h2>
+					<hr>
+					<section>
+						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114600.png" alt=""></p>
+						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Note the particular syntax of the each attribute which is reminiscent of forenhanced in Java. It allows you to declare a temporary variable which will represent each element of the collection. In our example, we declare the variable p.</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
