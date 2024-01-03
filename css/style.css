@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Paprika&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+body{
+	font-family: Ubuntu;
+	font-weight: 0;
+}
+			.first_slide{
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				width: 100%;
+			}
+			.first_aside{
+				height: 50vh;
+				display: flex;
+				justify-content: flex-end;
+			}
+			.title_h1{
+				font-size: 5rem;
+				text-align: left;
+				margin-bottom: 30px;
+			}
+
+
+			table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 7px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: skyblue;
+  opacity: .5;
+}
+
+.title_table{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.spring_title{
+	font-size: 35px;
+}
+
+.spring_title p{
+	margin: 20px;
+	font-size: 20px;
+}
+
+
+
+			.title_h3{
+				font-size: 40px;
+				text-align: left;
+				font-weight: 700;
+				margin-bottom: 15px;
+			}
+			.title_h4{
+				font-size: 30px;
+				text-align: left;
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+			.list_section{
+				font-size: 25px;
+				text-align: left;
+				font-weight: 700;
+				font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+			}
+
+			.second_aside{
+				height: 43vh;
+			}
+
+			.other_slide section{
+				height: 70%;
+				padding: 40px;
+				text-align: left;
+			}
+
+			.other_slide section ul{
+				text-align: justify;
+			}
+
+			.specify{
+				margin-left: 70px;
+			}
+
+			.other_slide section li{
+				font-size: 26px;
+				margin-bottom: 35px;
+			}
+
+			.fragment.blur {
+				filter: blur(5px);
+			}
+			.fragment.blur.visible {
+				filter: none;
+			}
+
+			.second_section, .third_aside{
+				background-color: rgba(20, 210, 20, 1);
+				height: 3vh;
+				position: fixed;
+				left: -50%;
+				width: 200%;
+				bottom: -12px;
+			}
+			.paragraph{
+				font-size: 40px;
+				margin-bottom: 50px;
+			}
+
+			.text{
+				font-size: 1.6em;
+				margin: 70px;
+			}

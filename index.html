@@ -9,96 +9,13 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/normalize.css">
 		<!-- <link rel="stylesheet" href="dist/theme/league.css"> -->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<style>
 
-			.first_slide{
-				display: flex;
-				flex-direction: column;
-				height: 100vh;
-				width: 100%;
-			}
-			.first_aside{
-				height: 50vh;
-				display: flex;
-				justify-content: flex-end;
-			}
-			.title_h1{
-				font-size: 70px;
-				text-align: left;
-				margin-bottom: 30px;
-			}
-			.title_h3{
-				font-size: 40px;
-				text-align: left;
-				font-weight: 700;
-				margin-bottom: 15px;
-			}
-			.title_h4{
-				font-size: 30px;
-				text-align: left;
-				font-weight: 600;
-				margin-bottom: 15px;
-			}
-			.list_section{
-				font-size: 25px;
-				text-align: left;
-				font-weight: 700;
-				font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-			}
-
-			.second_aside{
-				height: 43vh;
-			}
-
-			.other_slide section{
-				height: 70%;
-				padding: 40px;
-				text-align: left;
-			}
-
-			.other_slide section ul{
-				text-align: justify;
-			}
-
-			.specify{
-				margin-left: 70px;
-			}
-
-			.other_slide section li{
-				font-size: 26px;
-				margin-bottom: 35px;
-			}
-
-			.fragment.blur {
-				filter: blur(5px);
-			}
-			.fragment.blur.visible {
-				filter: none;
-			}
-
-			.second_section, .third_aside{
-				background-color: rgba(20, 210, 20, 1);
-				height: 4vh;
-				position: fixed;
-				left: -35%;
-				width: 170%;
-				bottom: -10px;
-			}
-			.paragraph{
-				font-size: 40px;
-				margin-bottom: 50px;
-			}
-
-			.text{
-				font-size: 1.6em;
-				margin: 70px;
-			}
-
-		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -116,6 +33,7 @@
 					</aside>
 					<aside class="third_aside"></aside>
 				</section>
+
 				<section class="other_slide">
 					<h2 class="title_h3">What is Spring Boot ?</h2>
 					<hr>
@@ -132,26 +50,94 @@
 					<aside class=" second_section"></aside>
 				</section>
 				<section class="other_slide">
+					<h2 class="title_h3">Spring vs. Spring Boot </h2>
+					<hr>
+					<section>
+						<ul>
+							<li>
+								<span style="font-size: 40px; ">Spring: </span>  <p style="margin: 20px;">Spring Framework is the most popular application development framework of Java. The main feature of the Spring Framework is dependency Injection or Inversion of Control (IoC). With the help of Spring Framework, we can develop a loosely coupled application. It is better to use if application type or characteristics are purely defined. </p>
+							</li> <br>
+							<li>
+								<span style="font-size: 40px; ">Spring Boot:</span> <p style="margin: 20px;"> Spring Boot is a module of Spring Framework. It allows us to build a stand-alone application with minimal or zero configurations. It is better to use if we want to develop a simple Spring-based application or RESTful services. </p>
+							</li>
+						</ul>
+						<p style="margin-top: 70px; font-size: 25px; ">The primary comparison between Spring and Spring Boot are discussed below.</p>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+
+				<section class="other_slide">
+					<h2 class="title_h3">Spring vs. Spring Boot </h2>
+					<hr>
+					<section>
+						<table>
+						  <tr>
+						    <td>Spring</td>
+						    <td>Spring Boot</td>
+						  </tr>
+						  <tr>
+						    <td>Spring Framework is a widely used Java EE framework for building applications.</td>
+						    <td>Spring Boot Framework is widely used to develop REST APIs.</td>
+						  </tr>
+						  <tr>
+						    <td>It aims to simplify Java EE development that makes developers more productive.</td>
+						    <td>It aims to shorten the code length and provide the easiest way to develop Web Applications.</td>
+						  </tr>
+						  <tr>
+						    <td>The primary feature of the Spring Framework is dependency injection.</td>
+						    <td>The primary feature of Spring Boot is Autoconfiguration. It automatically configures the classes based on the requirement.</td>
+						  </tr>
+						  <tr>
+						    <td>It helps to make things simpler by allowing us to develop loosely coupled applications.</td>
+						    <td>It helps to create a stand-alone application with less configuration.</td>
+						  </tr>
+						  <tr>
+						    <td>The developer writes a lot of code (boilerplate code) to do the minimal task.</td>
+						    <td>It reduces boilerplate code.</td>
+						  </tr>
+						  <tr>
+						    <td>To test the Spring project, we need to set up the sever explicitly.</td>
+						    <td>Spring Boot offers embedded server such as Jetty and Tomcat, etc.</td>
+						  </tr>
+						  <tr>
+						    <td>It does not provide support for an in-memory database.</td>
+						    <td>It offers several plugins for working with an embedded and in-memory database such as H2</td>
+						  </tr>
+						  <tr>
+						    <td>Developers manually define dependencies for the Spring project in pom.xml.</td>
+						    <td>Spring Boot comes with the concept of starter in pom.xml file that internally takes care of downloading the dependencies JARs based on Spring Boot Requirement.</td>
+						  </tr>
+						</table>
+
+						<p class="title_table">Comparison between Spring and Spring Boot</p>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+
+
+
+
+				<section class="other_slide">
 					<h2 class="title_h3">Spring Boot Ecosystem</h2>
 					<hr>
 					<section>
 						<ul>
-							<li class="fragment custom blur">Spring Framework:
+							<li class="fragment custom blur spring_title">Spring Framework:
 								<p>
-									- Inversion of Control (IoC): Spring Boot inherits the Inversion of Control capability from Spring, enabling the delegation of component management to Spring. <br>
+									- Inversion of Control (IoC): Spring Boot inherits the Inversion of Control capability from Spring, enabling the delegation of component management to Spring. <br><br>
 									- Dependency Injection: Spring facilitates dependency injection, enhancing code modularity and testability.
 								</p>
 							</li>
-							<li class="fragment custom blur">Spring Data
+							<li class="fragment custom blur spring_title">Spring Data
 								<p>
-									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br>
-									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br>
+									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br><br>
+									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br><br>
 									- MongoDB Support: Seamlessly integrates with MongoDB for NoSQL database-based applications. 
 								</p>
 							</li>
-							<li class="fragment custom blur">Spring Security:
+							<li class="fragment custom blur spring_title">Spring Security:
 								<p>
-									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br><br>
 									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
 								</p>
 							</li>
@@ -164,23 +150,23 @@
 					<hr>
 					<section>
 						<ul>
-							<li class="fragment custom blur">Spring Cloud
+							<li class="fragment custom blur spring_title">Spring Cloud
 								<p>
-									- Cloud-Native Applications: Extends Spring Boot capabilities for developing cloud-native applications. <br>
-									- Distributed Configuration: Offers solutions for distributed configuration of applications in cloud environments. <br>
+									- Cloud-Native Applications: Extends Spring Boot capabilities for developing cloud-native applications. <br><br>
+									- Distributed Configuration: Offers solutions for distributed configuration of applications in cloud environments. <br><br>
 									- Service Discovery: Facilitates dynamic service discovery and management of calls between microservices.
 								</p>
 							</li>
-							<li class="fragment custom blur">Spring Batch
+							<li class="fragment custom blur spring_title">Spring Batch
 								<p>
-									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br>
-									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br>
+									- Database Access: Spring Data simplifies access to relational and NoSQL databases. <br><br>
+									- JPA Integration: Uses Java Persistence API (JPA) for relational data persistence. <br><br>
 									- MongoDB Support: Seamlessly integrates with MongoDB for NoSQL database-based applications. 
 								</p>
 							</li>
-							<li class="fragment custom blur">Spring Security 
+							<li class="fragment custom blur spring_title">Spring Security 
 								<p>
-									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br><br>
 									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
 								</p>
 							</li>
@@ -206,7 +192,7 @@
 					<h2 class="title_h3">Get Started</h2>
 					<hr>
 					<section>
-						<p class="paragraph">We talk about four (04) topics in this section. </p>
+						<p class="paragraph">The training we are about to give will be divided into 4 parts</p>
 						<ul class="specify">
 							<li class="fragment custom blur"> System Requirements</li>
 							<li class="fragment custom blur"> Installing Spring Boot</li>
@@ -358,32 +344,27 @@
 					<hr>
 					<section>
 						<ul>
-							<li class="fragment custom blur">src/main/java Directory
+							<li class="fragment custom blur spring_title">src/main/java Directory
 								<p>
-									- Contains the main source code of the application.
-									 - The package structure typically follows the reverse domain name convention, for example, com.example.myapp.
+									- Contains the main source code of the application.<br><br>
+									- The package structure typically follows the reverse domain name convention, for example, com.example.myapp.<br><br>
 									- The entry point of the application is often in a package like com.example.myapp with a main class annotated with <strong>@SpringBootApplication</strong>.
 								</p>
 							</li>
-							<li class="fragment custom blur">src/main/resources Directory
+							<li class="fragment custom blur spring_title">src/main/resources Directory
 								<p>
-									- Contains non-Java resources of the application.
-									- Configuration files, property files, XML files, templates, etc.
+									- Contains non-Java resources of the application. <br><br>
+									- Configuration files, property files, XML files, templates, etc.<br><br>
 									- The application.properties or application.yml file is commonly used to configure the applications
 								</p>
 							</li>
-							<li class="fragment custom blur">src/test Directory
+							<li class="fragment custom blur spring_title">src/test Directory
 								<p>
-									- Authentication Management: Spring Security provides robust features for managing user authentication. <br>
+									- Authentication Management: Spring Security provides robust features for managing user authentication. <br><br>
 									- Access Control and Authorization: Enables access control and role-based authorization to secure application resources. 
 								</p>
 							</li>
-							<li class="fragment custom blur">templates Directory
-								<p>
-									- Contains templates files for templates engines . <br>
-									- Used to generate dynamic views in web applications. 
-								</p>
-							</li>
+							
 						</ul>
 					</section>
 					<aside class=" second_section"></aside>
@@ -393,28 +374,23 @@
 					<hr>
 					<section>
 						<ul>
-							<li class="fragment custom blur">pom.xml File (Maven) or build.gradle File(Gradle)
+							<li class="fragment custom blur spring_title">templates Directory
 								<p>
-									- Contains project configuration, including dependencies, plugins, and other build settings.
+									- Contains templates files for templates engines . <br><br>
+									- Used to generate dynamic views in web applications. 
+								</p>
+							</li>
+							<li class="fragment custom blur spring_title">pom.xml File (Maven) or build.gradle File(Gradle)
+								<p>
+									- Contains project configuration, including dependencies, plugins, and other build settings.<br><br>
 									- Also manages the project's lifecycle, compilation, testing, packaging, etc.
 								</p>
 							</li>
-							<li class="fragment custom blur">target Directory (Maven) or Build Directory (Gradle)
+							
+							
+							<li class="fragment custom blur spring_title">static (or public) Directory
 								<p>
-									- Contains files generated during compilation, packaging and building of the project.
-									- The executable JAR file of the application (if configured as such) is usually created in this directory.
-								</p>
-							</li>
-							<li class="fragment custom blur">application.properties (or application.yml) File
-								<p>
-									- Contains configuration properties for the application <br>
-									- Defines parameters such as database URL, ports, active profiles. <br>
-									- Can be used to customize the behavior of the application without modifying the source code 
-								</p>
-							</li>
-							<li class="fragment custom blur">static (or public) Directory
-								<p>
-									- Contains statics resources such as CSS files, Javascript files, images <br>
+									- Contains statics resources such as CSS files, Javascript files, images <br><br>
 									- These files are served directly by the embedded web server
 								</p>
 							</li>
@@ -422,13 +398,36 @@
 					</section>
 					<aside class=" second_section"></aside>
 				</section>
-				<section class="other_slide">
-					<h2 class="title_h3">Fundamentals concepts of Spring Boot</h2>
+								<section class="other_slide">
+					<h2 class="title_h3">Spring Boot Project Folder Structure</h2>
 					<hr>
 					<section>
-						<h3 class="title_h3">Inversion of Control (IoC) and Dependency Injection </h3>
+						<ul>
+							
+							<li class="fragment custom blur spring_title">target Directory (Maven) or Build Directory (Gradle)
+								<p>
+									- Contains files generated during compilation, packaging and building of the project.<br><br>
+									- The executable JAR file of the application (if configured as such) is usually created in this directory.
+								</p>
+							</li>
+							<li class="fragment custom blur spring_title">application.properties (or application.yml) File
+								<p>
+									- Contains configuration properties for the application <br><br>
+									- Defines parameters such as database URL, ports, active profiles. <br><br>
+									- Can be used to customize the behavior of the application without modifying the source code 
+								</p>
+							</li>
+						</ul>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h3 " style="font-size: 30px;">Fundamentals concepts of Spring Boot</h2>
+					<hr>
+					<section>
+						
 						<ol>
-							<li class="fragment custom blur"> Inversion of Control (IoC) 
+							<li class="fragment custom blur spring_title"> Inversion of Control (IoC) </li>
 								<ul style="margin-left: 50px;">
 									<li>It's a principle where the management of object lifecycles is inverted. </li>
 									<li>Instead of the application directly creating its objects, it lets them be created and managed by an Inversion of Control container, such as Spring. </li>
@@ -436,17 +435,27 @@
 									<li>This is a related concept to IoC. Rather than manually creating dependencies for a component, Spring automatically injects dependencies when the object is created. </li>
 									<li>This makes the code more flexible, testable, and easier to maintain.</li>
 								</ul>
-							</li>
-							<li class="fragment custom blur"> Dependency Injection 
-								<ul style="margin-left: 50px;">
-									<li>This is a related concept to IoC. Rather than manually creating dependencies for a component, Spring automatically injects dependencies when the object is created. </li>
-									<li>This makes the code more flexible, testable, and easier to maintain.</li>
-								</ul>
-							</li>
+							
 						</ol>
 					</section>
 					<aside class=" second_section"></aside>
 				</section>
+				<section class="other_slide">
+					<h2 class="title_h3 " style="font-size: 30px;">Fundamentals concepts of Spring Boot</h2>
+					<hr>
+					<section>
+						<ol>
+							<li class="fragment custom blur spring_title"> Dependency Injection </li>
+								<ul style="margin-left: 50px;">
+									<li>This is a related concept to IoC. Rather than manually creating dependencies for a component, Spring automatically injects dependencies when the object is created. </li>
+									<li>This makes the code more flexible, testable, and easier to maintain.</li>
+								</ul>
+							
+						</ol>
+					</section>
+					<aside class=" second_section"></aside>
+				</section>
+				
 				<section class="other_slide">
 					<h2 class="title_h4">Fundamentals concepts of Spring Boot</h2>
 					<hr>
@@ -549,7 +558,7 @@
 							<li>Step 1: Fire up the IDE</li>
 							<li>Step 2: Create a new Spring Starter Project</li>
 							<li>Step 3: Adding JSP dependencies
-								<p> <img src="./Capture d'écran 2023-12-08 101617.png" alt=""></p>
+								<p> <img src="./images/Capture d'écran du 2023-12-22 14.21.25.png" alt=""></p>
 							</li>
 							
 						</ul>
@@ -564,18 +573,27 @@
 								Step 4: Adding configurations to application,properties
 								<p>
 									Select the application.properties file in the src/main/resources path. Then add the following two configurations to it like shown below,
-									<img src="./Capture d'écran du 2023-12-22 10.09.29.png" alt="">
+									<img src="./images/Capture d'écran du 2023-12-22 10.09.29.png" alt="">
 								</p>
 							</li>
 							<li>Step 5: Creating the folders
 								<p>
 									In this step we will create new folders in the src/main path. First we will create webapp folder in the above mention path by right clicking and selecting new folder. 
 									Next we will create a sub folder jsp in webapp. When it is all done the folder structure will look like below,
-									<img src="./Capture d'écran du 2023-12-22 10.12.49.png" alt="">
+									<img src="./images/Capture d'écran du 2023-12-22 10.12.49.png" alt="">
 								</p>
 							</li>
 						</ul>
 					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Practical work</h2>
+					<hr>
+					<section>
+						<p>In this section, we will practice integrating jsp view in Spring Boot application.</p> <br>
+						<p><a href="https://github.com/fadelsew02/toDo-list-springboot-jsp">Download code</a></p>
+					</section>
+					<aside class=" second_section"></aside>
 				</section>
 
 				<section class="other_slide">
@@ -595,9 +613,9 @@
 					<hr>
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">For an application using Spring Boot, the configuration is very simple. You just need to add a dependency in your project to the module spring-boot-starter-thymeleaf. If you use Maven, you need to add to your file pom.xml:</p>
-						<p style="text-align: center;"><img src="./dependency-for-thymeleaf.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/dependency-for-thymeleaf.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">By default, Thymeleaf templates should be placed in your project directory . Static files (not transformed by Thymeleaf ) must be placed in your project directory .src/main/resources/templatessrc/main/resources/static</p>
-						<p style="text-align: center;"><img src="./note-thymeleaf.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/note-thymeleaf.png" alt=""></p>
 					</section>
 				</section>
 				<section class="other_slide">
@@ -606,7 +624,7 @@
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">A Thymeleaf template for an HTML5 page is an HTML page using Thymeleaf attributes which will be interpreted by the server to produce the final page.</p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In order to respect the HTML5 format, thymeleaf attributes are declared as attributes data-th-*. These attributes will not be present in the final page but ensure that the template is itself a valid HTML5 page .</p>
-						<p style="text-align: center;"><img src="./exemple-thymeleaf.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/exemple-thymeleaf.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In the example above, we use the attribute data-th-textto indicate the text content of the tag &lt;div&gt;. The text David will be replaced at runtime by the result of the expression ${ user.login }</p>
 					</section>
 				</section>
@@ -614,7 +632,7 @@
 					<h2 class="title_h4">Thymeleaf attributes</h2>
 					<hr>
 					<section>
-						<p style="text-align: center;margin-bottom: 20px;"><img src="./note-2-thymeleaf.png" alt=""></p>
+						<p style="text-align: center;margin-bottom: 20px;"><img src="./images/note-2-thymeleaf.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">The content of Thymeleaf attributes can be simple text or an expression that will be interpreted at runtime.Expressions are delimited by:</p>
 					</section>
 				</section>
@@ -656,8 +674,8 @@
 					<hr>
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">An expression delimited by ${...} represents an expression to evaluate. In a Spring application, this expression is written with SpEL and can reference any object present in the model.</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 101617.png" alt=""></p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 102929.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 101617.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 102929.png" alt=""></p>
 					</section>
 				</section>
 				<section class="other_slide">
@@ -665,7 +683,7 @@
 					<hr>
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">An expression delimited by *{...}represents an expression to evaluate to select an attribute of an object. We use the Thymeleaf object attribute to define the reference object. This type of expression is very useful when you want to build forms or display the properties of a model object. Let's imagine that we want to display the information of a model object called utilisateur, this object contains the properties prenom, nomand age. We can indicate that this object is the reference object and select each property with *{...}:</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 103359.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 103359.png" alt=""></p>
 					</section>
 				</section>
 				<section class="other_slide">
@@ -673,7 +691,7 @@
 					<hr>
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">A delimited expression @{...}represents a URL that must be resolved relative to the page generation context. All links internal to your application referencing your pages, your style sheets, your script files, etc. must use Thymeleaf attributes to position the path. The corresponding HTML attribute can be retained to allow the page to be opened locally.</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 104240.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 104240.png" alt=""></p>
 					</section>
 				</section>
 				<section class="other_slide">
@@ -682,7 +700,7 @@
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Thymeleaf is configured by file type to prevent data injection. For HTML page generation, Thymeleaf will HTML escape reserved characters like &lt;or &gt;.</p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">So the template :</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 113951.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 113951.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">will produce the final HTML page:</p>
 					</section>
 				</section>
@@ -691,7 +709,7 @@
 					<hr>
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Thus, the dynamic data in the page does not modify the structure of the template and HTML injection is not possible.</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114115.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 114115.png" alt=""></p>
 					</section>
 				</section>
 				<section class="other_slide">
@@ -700,7 +718,7 @@
 					<section>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">In a template , it is very often necessary to produce part of a document under certain conditions or to repeat certain portions (for example to generate a table). The SpEL language does not allow such complex structures to be expressed. On the other hand, there are the Thymeleaf if and each attributes which are designed for this.
 							The if attribute allows you to control the production of the tag and everything it contains following the expression of a condition:</p>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114428.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 114428.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">The each attribute allows you to iterate through an array or list or any iterable structure and repeat the tag and all its contents. We can thus produce an HTML table:</p>
 					</section>
 				</section>
@@ -708,9 +726,18 @@
 					<h2 class="title_h4">Thymeleaf : Conditions and loops</h2>
 					<hr>
 					<section>
-						<p style="text-align: center;"><img src="./Capture d'écran 2023-12-08 114600.png" alt=""></p>
+						<p style="text-align: center;"><img src="./images/Capture d'écran 2023-12-08 114600.png" alt=""></p>
 						<p style="font-size: 1.6em;margin-bottom: 20px;text-align: justify;">Note the particular syntax of the each attribute which is reminiscent of forenhanced in Java. It allows you to declare a temporary variable which will represent each element of the collection. In our example, we declare the variable p.</p>
 					</section>
+				</section>
+				<section class="other_slide">
+					<h2 class="title_h4">Practical work</h2>
+					<hr>
+					<section>
+						<p>In this section, we will practice integrating thymeleaf view engine in Spring Boot application.</p> <br>
+						<p><a href="https://github.com/fadelsew02/toDoList-springboot-thymeleaf">Download code</a></p>
+					</section>
+					<aside class=" second_section"></aside>
 				</section>
 			</div>
 		</div>
